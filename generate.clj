@@ -29,8 +29,15 @@
      [:link {:href "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" :rel "stylesheet"}]
      ]
     [:body
-     [:header.box.text-lg "Hello world"]
-     [:ul
+     [:header.grid.grid-cols-3.bg-gray-200.h-40.w-full.shadow-md
+      [:h1.text-lg.my-auto "Babashka"]
+      [:nav.flex.flex-row.flex-nowrap
+       [:a.my-auto.mx-10 {:href "#"} "Overview"]
+       [:a.my-auto.mx-10 {:href "#"} "Docs"]
+       [:a.my-auto.mx-10 {:href "#"} "Contribute"]
+       ]
+      ]
+     [:ul.container.mx-auto
  (for [{:keys [name location country]} (:people data)]
    [:li (s/join ", " [name location country])])]
      ]
