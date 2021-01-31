@@ -1,0 +1,9 @@
+{:people [{:name     "Michiel"
+           :location "Amersfoort"
+           :country  "The Netherlands"}
+          {:name     "Alice"
+           :location "Hyderabad"
+           :country  "India"}
+          {:name     "Rahul"
+           :location "Berlin"
+           :country  "Germany"}]}
