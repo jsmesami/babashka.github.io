@@ -4,8 +4,8 @@
 (pods/load-pod 'retrogradeorbit/bootleg "0.1.9")
 (require '[clojure.edn :as edn]
          '[clojure.string :as s]
-         '[pod.retrogradeorbit.bootleg.utils :as u]
-)
+         '[pod.retrogradeorbit.bootleg.utils :as u])
+
 
 (defn convert-to-html
   [site]
@@ -62,8 +62,12 @@
       [:ul.container.mx-auto
        (for [{:keys [name location country]} (:people data)]
          [:li (s/join ", " [name location country])])]
-      [:pre [:code.language-css "
-             p { color: red }
+      [:pre [:code.language-clojure"
+              (defn hello []
+                (println \"Hello world\"))
+
+              (defn -main []
+                (hello))
              "]]]]]])
 
 
