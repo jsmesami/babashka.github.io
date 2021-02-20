@@ -23,7 +23,7 @@
   [:html
    [:head
     [:meta {:charset "UTF-8"}]
-    [:title "Hello world"]
+    [:title "Babashka"]
     [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
     [:link {:rel "stylesheet" :href "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"}]
     [:link {:rel "stylesheet" :href "https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-solarizedlight.min.css"}]
@@ -62,15 +62,63 @@
       [:ul.container.mx-auto
        (for [{:keys [name location country]} (:people data)]
          [:li (s/join ", " [name location country])])]
-      [:pre [:code.language-clojure"
-              (defn hello []
-                (println \"Hello world\"))
-
-              (defn -main []
-                (hello))
-             "]]]]]])
-
-
+      [:div.mt-20 
+       [:pre [:code.language-clojure "(defn hello []\n\t(println \"Hello world\"))\n\n(defn -main []\n\t(hello))\n"]]
+       ]
+      ]
+     
+     [:img.mx-auto.my-40 {:src "./assets/divider.png"}]
+     
+     [:section
+      [:h1.text-5xl {:style "font-family: Forum, serif;"} "Features"]
+      [:div.mt-10.grid.gap-8.grid-cols-3
+       [:article
+        [:h3.text-3xl {:style "font-family: Forum, serif;"} "Feature"]
+        [:div.h-60.mt-4.border.rounded-3xl.border-gray-900]
+        [:p.text-xl.mt-4 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."]]
+       [:article
+        [:h3.text-3xl {:style "font-family: Forum, serif;"} "Feature"]
+        [:div.h-60.mt-4.border.rounded-3xl.border-gray-900]
+        [:p.text-xl.mt-4 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."]]
+       [:article
+        [:h3.text-3xl {:style "font-family: Forum, serif;"} "Feature"]
+        [:div.h-60.mt-4.border.rounded-3xl.border-gray-900]
+        [:p.text-xl.mt-4 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."]]]
+      ]
+     
+     [:img.mx-auto.my-40 {:src "./assets/divider.png"}]
+     
+     
+     [:section
+      [:h1.text-5xl {:style "font-family: Forum, serif;"} "Our Community"]
+      [:p.text-xl.mt-12 {:style "width: 600px;"} "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "]
+      [:button.border.border-gray-900.p-2.mt-4 "Participate"]
+      ]
+     
+     [:img.mx-auto.my-40 {:src "./assets/divider.png"}]
+     
+      [:section
+      [:h1.text-5xl {:style "font-family: Forum, serif;"} "Contribute"]
+      [:p.text-xl.mt-12 {:style "width: 600px;"} "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "]
+      [:div.my-4.grid.grid-cols-2.w-60.gap-4
+        [:button.border.border-gray-900.p-2 "Docs"]
+        [:button.border.border-gray-900.p-2 "Github"]
+       ]
+      ]
+     
+     [:img.mx-auto.my-40 {:src "./assets/divider.png"}]
+     
+     
+     [:section
+      [:h1.text-5xl {:style "font-family: Forum, serif;"} "Support"]
+      [:p.text-xl.mt-12 {:style "width: 600px;"} "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "]
+      [:div.my-4.grid.grid-cols-2.w-60.gap-4
+       [:button.border.border-gray-900.p-2 "Docs"]
+       [:button.border.border-gray-900.p-2 "Github"]]]
+     
+  
+     
+     ]]])
 
 
 (convert-to-html site)
