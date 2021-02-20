@@ -89,11 +89,17 @@
      [:img.mx-auto.my-40 {:src "./assets/divider.png"}]
      
      
-     [:section
-      [:h1.text-5xl {:style "font-family: Forum, serif;"} "Our Community"]
-      [:p.text-xl.mt-12 {:style "width: 600px;"} "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "]
-      [:button.border.border-gray-900.p-2.mt-4 "Participate"]
+     [:section.grid.grid-cols-6.gap-4
+      [:div.col-start-1.col-end-5
+       [:h1.text-5xl {:style "font-family: Forum, serif;"} "Our Community"]
+        [:p.text-xl.mt-12 {:style "width: 600px;"} "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "]
+        [:button.border.border-gray-900.p-2.mt-4 "Participate"]
+       ]
+      [:div.col-start-5.col-end-7.relative
+       [:img.w-24.absolute {:src "./assets/discord.svg" :style "left: 50%; top: 50%; transform: translate(-110%, -110%);"}]
+       [:img.w-24.absolute {:src "./assets/twitter.svg" :style "left: 50%; top: 50%; transform: translate(10%, 10%);" }]
       ]
+     ]
      
      [:img.mx-auto.my-40 {:src "./assets/divider.png"}]
      
@@ -113,11 +119,8 @@
       [:h1.text-5xl {:style "font-family: Forum, serif;"} "Support"]
       [:p.text-xl.mt-12 {:style "width: 600px;"} "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "]
       [:div.my-4.grid.grid-cols-2.w-60.gap-4
-       [:button.border.border-gray-900.p-2 "Docs"]
-       [:button.border.border-gray-900.p-2 "Github"]]]
-     
-  
-     
+       [:button.border.border-gray-900.p-2 "Discord"]
+       [:button.border.border-gray-900.p-2 "Ask on Twitter"]]]
      ]]])
 
 
